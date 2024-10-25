@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+</head>
+<body>
+
+
+<h1>Welcome to the 24x7 Compostela Fitness Club: Courts Reservation Page!!</h1>
+
+
+<div>
+    <img src="planification.png" width="300" height="300" alt="Planning Image">
+</div>
+
+
+
+<form action="/submit_reservation" method="post">
+    
+    <fieldset>
+        <legend>Member Demographics</legend>
+
+     
+        <div>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+        </div>
+
+      
+        <div>
+            <label>Are you a member?</label><br>
+            <input type="radio" id="member" name="membership" value="member" checked>
+            <label for="member">Member</label><br>
+            <input type="radio" id="non-member" name="membership" value="non-member">
+            <label for="non-member">Non-member</label><br><br>
+        </div>
+
+        <div>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+        </div>
+    </fieldset> 
+
+
+    <div>
+        <label for="facility">Facility:</label><br>
+        <select id="facility" name="facility">
+            <option value="indoor-football">Indoor football</option>
+            <option value="badminton">Badminton</option>
+            <option value="squash">Squash</option>
+            <option value="racquetball">Racquetball</option>
+            <option value="basketball">Basketball</option>
+        </select><br><br>
+    </div>
+
+   
+    <div>
+        <label for="reservation">Select a reservation date and time:</label><br>
+        <input type="datetime-local" id="reservation" name="reservation" required><br><br>
+    </div>
+
+    <div>
+        <input type="checkbox" id="policy" name="policy" required>
+        <label for="policy">I agree to the club’s reservation policy</label><br><br>
+    </div>
+
+  
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+</body>
+</html>
